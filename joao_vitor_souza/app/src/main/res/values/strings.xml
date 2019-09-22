@@ -1,3 +1,17 @@
 <resources>
-    <string name="app_name">joao_vitor_souza</string>
+    <string name="app_name">Calc Form</string>
+    <string name="quadrado">Quadrado</string>
+    <string name="tri_ngulo">Triângulo</string>
+    <string name="c_rculo">Círculo</string>
+    <string name="selecione_a_forma">Selecione a forma:</string>
+    <string name="avan_ar">Avançar</string>
+    <string name="informe_os_dados_do_c_rculo">Informe os dados do círculo:</string>
+    <string name="raio">Raio:</string>
+    <string name="informe_os_dados_do_tri_ngulo">Informe os dados do triângulo:</string>
+    <string name="base">Base:</string>
+    <string name="altura">Altura:</string>
+    <string name="informe_os_dados_do_quadrado">Informe os dados do quadrado:</string>
+    <string name="come_ar_novamento">Começar novamento</string>
+    <string name="rea">Área:</string>
+    <string name="batata_resultado">batata resultado</string>
 </resources>
