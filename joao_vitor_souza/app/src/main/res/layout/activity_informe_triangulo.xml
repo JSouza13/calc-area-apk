@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".InformeTrianguloActivity">
 
     <TextView
         android:id="@+id/textView3"
@@ -23,6 +23,7 @@
         android:layout_marginEnd="15dp"
         android:layout_marginBottom="15dp"
         android:text="@string/avan_ar"
+        android:onClick="btClicado"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -46,7 +47,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <EditText
-        android:id="@+id/etRaio"
+        android:id="@+id/baseTriangulo"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
@@ -66,10 +67,10 @@
         android:layout_marginTop="30dp"
         android:text="@string/altura"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etRaio" />
+        app:layout_constraintTop_toBottomOf="@+id/baseTriangulo" />
 
     <EditText
-        android:id="@+id/editText4"
+        android:id="@+id/alturaTriangulo"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"

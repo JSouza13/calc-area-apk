@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".ResultadoQuadradoActivity">
 
     <Button
         android:id="@+id/button"
@@ -12,48 +12,29 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="15dp"
         android:text="@string/come_ar_novamento"
+        android:onClick="btClicado"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <LinearLayout
-        android:id="@+id/rgOperacao"
+    <TextView
+        android:id="@+id/resultado"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
+        android:text="TextView"
+        android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <TextView
-            android:id="@+id/textView5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/rea"
-            app:layout_constraintStart_toStartOf="parent"
-            tools:layout_editor_absoluteY="302dp" />
-
-        <EditText
-            android:id="@+id/editText5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="numberDecimal"
-            android:text="@string/batata_resultado"
-            app:layout_constraintEnd_toEndOf="parent"
-            tools:layout_editor_absoluteY="302dp"
-            android:autofillHints="" />
-    </LinearLayout>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="235dp"
         android:layout_height="188dp"
-        android:layout_marginBottom="30dp"
+        android:layout_marginBottom="40dp"
         android:contentDescription="@string/quadrado"
-        app:layout_constraintBottom_toTopOf="@+id/rgOperacao"
+        app:layout_constraintBottom_toTopOf="@+id/resultado"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@color/colorPrimary" />

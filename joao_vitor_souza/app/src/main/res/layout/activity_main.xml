@@ -7,12 +7,13 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/botaoAvancar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="15dp"
         android:layout_marginBottom="15dp"
         android:text="@string/avan_ar"
+        android:onClick="btClicado"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -21,13 +22,13 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
-        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintBottom_toTopOf="@+id/botaoAvancar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <RadioButton
-            android:id="@+id/rbMais"
+            android:id="@+id/rbQuadrado"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/quadrado"
@@ -35,14 +36,14 @@
             tools:layout_editor_absoluteY="177dp" />
 
         <RadioButton
-            android:id="@+id/rbMenos"
+            android:id="@+id/rbTriangulo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/tri_ngulo" />
 
         <RadioButton
-            android:id="@+id/rbVezes"
+            android:id="@+id/rbCirculo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -57,6 +58,7 @@
         android:layout_marginStart="30dp"
         android:layout_marginBottom="15dp"
         android:text="@string/selecione_a_forma"
+        android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/rgOperacao"
         app:layout_constraintStart_toStartOf="parent" />
 

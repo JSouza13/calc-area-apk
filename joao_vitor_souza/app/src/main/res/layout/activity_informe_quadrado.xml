@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".InformeQuadradoActivity">
 
     <TextView
         android:id="@+id/textView3"
@@ -16,14 +16,16 @@
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/botaoAvancar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="15dp"
         android:layout_marginBottom="15dp"
         android:text="@string/avan_ar"
+        android:onClick="btClicado"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+       />
 
     <TextView
         android:id="@+id/textView"
@@ -46,7 +48,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <EditText
-        android:id="@+id/etRaio"
+        android:id="@+id/baseQuadrado"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
@@ -66,10 +68,10 @@
         android:layout_marginTop="30dp"
         android:text="@string/altura"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etRaio" />
+        app:layout_constraintTop_toBottomOf="@+id/baseQuadrado" />
 
     <EditText
-        android:id="@+id/editText4"
+        android:id="@+id/alturaQuadrado"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"

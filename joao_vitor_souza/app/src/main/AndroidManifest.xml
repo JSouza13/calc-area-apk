@@ -16,6 +16,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".InformeQuadradoActivity"></activity>
+        <activity
+            android:name=".ResultadoQuadradoActivity"></activity>
+        <activity
+            android:name=".InformeCirculoActivity"></activity>
+        <activity
+            android:name=".ResultadoCirculoActivity"></activity>
+        <activity
+            android:name=".InformeTrianguloActivity"></activity>
+        <activity
+            android:name=".ResultadoTrianguloActivity"></activity>
     </application>
 
 </manifest>
