@@ -8,21 +8,22 @@
 
     <Button
         android:id="@+id/botaoAvancar"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="15dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
         android:layout_marginBottom="15dp"
         android:onClick="btClicado"
         android:text="@string/avan_ar"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <RadioGroup
         android:id="@+id/rgOperacao"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
         app:layout_constraintBottom_toTopOf="@+id/botaoAvancar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -33,6 +34,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/quadrado"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
             android:textSize="24sp"
             tools:layout_editor_absoluteX="102dp"
             tools:layout_editor_absoluteY="177dp" />
@@ -59,11 +61,13 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
+        android:layout_marginTop="116dp"
         android:layout_marginBottom="15dp"
         android:text="@string/selecione_a_forma"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/rgOperacao"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

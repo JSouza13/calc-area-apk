@@ -10,8 +10,10 @@
 
     <Button
         android:id="@+id/button"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
         android:layout_marginBottom="15dp"
         android:onClick="btClicado"
         android:src="@drawable/triangulo"
@@ -37,7 +39,7 @@
         android:id="@+id/imageView2"
         android:layout_width="220dp"
         android:layout_height="210dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="5dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"

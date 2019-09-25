@@ -18,7 +18,7 @@ public class ResultadoTrianguloActivity extends AppCompatActivity {
         double resultado = getIntent().getDoubleExtra("resultado", -1);
 
         TextView area = findViewById(R.id.resultado);
-        area.setText( String.valueOf("Area: " + resultado + " cm2") );
+        area.setText( String.valueOf("Área: " + resultado + " cm2") );
     }
 
     public void btClicado(View v){
