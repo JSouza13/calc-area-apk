@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.RadioGroup;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -21,24 +22,32 @@ public class MainActivity extends AppCompatActivity {
     public void btClicado(View v){
         Log.d("ACAO", "Método btClicado chamado");
 
+        try {
+
             RadioGroup operacao = findViewById(R.id.rgOperacao);
 
-            if (operacao.getCheckedRadioButtonId() == R.id.rbQuadrado){
+
+            if (operacao.getCheckedRadioButtonId() == R.id.rbQuadrado) {
 
                 Intent quadradoActivity = new Intent(MainActivity.this, InformeQuadradoActivity.class);
                 startActivity(quadradoActivity);
 
-            }else if(operacao.getCheckedRadioButtonId() == R.id.rbTriangulo){
+            } else if (operacao.getCheckedRadioButtonId() == R.id.rbTriangulo) {
 
                 Intent trianguloActivity = new Intent(MainActivity.this, InformeTrianguloActivity.class);
                 startActivity(trianguloActivity);
 
-            }else if(operacao.getCheckedRadioButtonId() == R.id.rbCirculo) {
+            } else if (operacao.getCheckedRadioButtonId() == R.id.rbCirculo) {
 
                 Intent circuloActivity = new Intent(MainActivity.this, InformeCirculoActivity.class);
                 startActivity(circuloActivity);
             }
-
+            else {
+                throw new Exception();
+            }
+        }catch (Exception e){
+            Toast.makeText(this, "Escolha uma opção.", Toast.LENGTH_LONG).show();
+        }
     }
 
 

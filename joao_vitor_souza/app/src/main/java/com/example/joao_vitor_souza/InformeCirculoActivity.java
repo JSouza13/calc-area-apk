@@ -27,18 +27,27 @@ public class InformeCirculoActivity extends AppCompatActivity {
 
         EditText raioCirculo = findViewById(R.id.etRaio);
 
-        double n1 = Double.parseDouble(raioCirculo.getText().toString());
 
-        double resultado = Math.PI * Math.pow(n1,2);
+
 
         try {
 
-            Intent intecaoAbrirNovaActivity = new Intent(this, ResultadoCirculoActivity.class);
-            intecaoAbrirNovaActivity.putExtra("resultado", resultado);
-            startActivity(intecaoAbrirNovaActivity);
+            if(raioCirculo != null) {
+
+                double n1 = Double.parseDouble(raioCirculo.getText().toString());
+
+                double resultado = Math.PI * Math.pow(n1, 2);
+
+                Intent intecaoAbrirNovaActivity = new Intent(this, ResultadoCirculoActivity.class);
+                intecaoAbrirNovaActivity.putExtra("resultado", resultado);
+                startActivity(intecaoAbrirNovaActivity);
+            }
+            else {
+                throw new Exception();
+            }
 
         }catch (Exception e){
-            Toast.makeText(this, "Erro ao realizar o cálculo!", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "É necessário informar todos os campos!", Toast.LENGTH_LONG).show();
         }
     }
 }

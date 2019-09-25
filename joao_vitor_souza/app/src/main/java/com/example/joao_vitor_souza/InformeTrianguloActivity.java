@@ -28,19 +28,26 @@ public class InformeTrianguloActivity extends AppCompatActivity {
         EditText baseTriangulo = findViewById(R.id.baseTriangulo);
         EditText alturaTriangulo = findViewById(R.id.alturaTriangulo);
 
-        double n1 = Double.parseDouble(baseTriangulo.getText().toString());
-        double n2 = Double.parseDouble(alturaTriangulo.getText().toString());
 
-        double resultado = (n1 * n2) / 2;
 
         try {
+            if(baseTriangulo != null || alturaTriangulo != null) {
 
-            Intent intecaoAbrirNovaActivity = new Intent(this, ResultadoTrianguloActivity.class);
-            intecaoAbrirNovaActivity.putExtra("resultado", resultado);
-            startActivity(intecaoAbrirNovaActivity);
+                double n1 = Double.parseDouble(baseTriangulo.getText().toString());
+                double n2 = Double.parseDouble(alturaTriangulo.getText().toString());
+
+                double resultado = (n1 * n2) / 2;
+
+                Intent intecaoAbrirNovaActivity = new Intent(this, ResultadoTrianguloActivity.class);
+                intecaoAbrirNovaActivity.putExtra("resultado", resultado);
+                startActivity(intecaoAbrirNovaActivity);
+            }
+            else {
+                throw new Exception();
+            }
 
         }catch (Exception e){
-            Toast.makeText(this, "Erro ao realizar o cálculo!", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "É necessário informar todos os campos!", Toast.LENGTH_LONG).show();
         }
     }
 }

@@ -28,17 +28,25 @@ public class InformeQuadradoActivity extends AppCompatActivity {
         EditText baseQuadrado = findViewById(R.id.baseQuadrado);
         EditText alturaQuadrado = findViewById(R.id.alturaQuadrado);
 
-            double n1 = Double.parseDouble(baseQuadrado.getText().toString());
-            double n2 = Double.parseDouble(alturaQuadrado.getText().toString());
 
-            double resultado = n1 * n2;
 
             try {
-                Intent intecaoAbrirNovaActivity = new Intent(this, ResultadoQuadradoActivity.class);
-                intecaoAbrirNovaActivity.putExtra("resultado", resultado);
-                startActivity(intecaoAbrirNovaActivity);
+                if(baseQuadrado != null || alturaQuadrado != null) {
+
+                    double n1 = Double.parseDouble(baseQuadrado.getText().toString());
+                    double n2 = Double.parseDouble(alturaQuadrado.getText().toString());
+
+                    double resultado = n1 * n2;
+
+                    Intent intecaoAbrirNovaActivity = new Intent(this, ResultadoQuadradoActivity.class);
+                    intecaoAbrirNovaActivity.putExtra("resultado", resultado);
+                    startActivity(intecaoAbrirNovaActivity);
+                }
+                else {
+                    throw new Exception();
+                }
             }catch (Exception e){
-                Toast.makeText(this, "Erro ao realizar o cálculo!", Toast.LENGTH_LONG).show();
+                Toast.makeText(this, "É necessário informar todos os campos!", Toast.LENGTH_LONG).show();
             }
     }
 }
