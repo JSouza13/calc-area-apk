@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:orientation="horizontal" >
+
 
     <Button
         android:id="@+id/botaoAvancar"
@@ -20,9 +22,8 @@
 
     <RadioGroup
         android:id="@+id/rgOperacao"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
         app:layout_constraintBottom_toTopOf="@+id/botaoAvancar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -59,11 +60,13 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
+        android:layout_marginTop="15dp"
         android:layout_marginBottom="15dp"
         android:text="@string/selecione_a_forma"
-        android:textSize="30sp"
+        android:textSize="45sp"
         app:layout_constraintBottom_toTopOf="@+id/rgOperacao"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
