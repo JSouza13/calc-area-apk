@@ -18,9 +18,7 @@
         android:onClick="btClicado"
         android:text="@string/come_ar_novamento"
         android:textAlignment="center"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textSize="18sp"
-        android:theme="@style/TextAppearance.AppCompat.Widget.Button.Colored"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

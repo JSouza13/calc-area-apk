@@ -8,6 +8,8 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.text.DecimalFormat;
+
 public class ResultadoCirculoActivity extends AppCompatActivity {
 
     @Override
@@ -18,6 +20,8 @@ public class ResultadoCirculoActivity extends AppCompatActivity {
         double resultado = getIntent().getDoubleExtra("resultado", -1);
 
         TextView area = findViewById(R.id.resultado);
+        DecimalFormat formato = new DecimalFormat("#.##");
+        resultado = Double.valueOf(formato.format(resultado));
         area.setText( String.valueOf("Area: " + resultado + " cm2") );
     }
 
